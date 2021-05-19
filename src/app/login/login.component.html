@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <div class="login-content">
+        <header class="top">
+            <div>
+                <h3> Welcome To Login Page </h3>
+            </div>
+        </header>
+        <form #userForm="ngForm" (ngSubmit)="getUserDetails(userForm.value)">
+            <div class="alert alert-danger" *ngIf="isSuccess">
+               Please Enter Valid Credential
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label>User Name</label>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" name="username" ngModel placeholder="Enter UserName"/>
+                </div>
+                <div class="col-md-4">
+                    <label>Password</label>
+                </div>
+                <div class="col-md-8">
+                    <input type="password" name="password" ngModel placeholder="Enter password"/>
+                </div>
+            </div>
+            <button class="btn btn-info" type="submit">Login</button>
+        </form>
+    </div>
+    
+</div>
+
+
+
+<!-- <div class="type">
+    <span>
+        <h5 class="type1">Email</h5>
+        <input class="input1" type="text" placeholder="Enter your email">
+    </span>
+    <span>
+        <h5 class="type2">Password</h5>
+        <input class="input2" type="password" placeholder="Enter your password">
+    </span>
+    <div class="onetype">
+        <a class="onetype1" href="login_page.html" target="_blank">Login</a>
+        <a class="onetype2" href="login_page.html" target="_blank">Forgot Password?</a>
+    </div> -->
