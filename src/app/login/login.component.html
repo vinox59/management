@@ -10,20 +10,19 @@
                Please Enter Valid Credential
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-12">
                     <label>User Name</label>
+                    <input type="text" name="username" ngModel placeholder="Enter UserName" class="form-control"/>
                 </div>
-                <div class="col-md-8">
-                    <input type="text" name="username" ngModel placeholder="Enter UserName"/>
-                </div>
-                <div class="col-md-4">
+                <div class="col-md-12">
                     <label>Password</label>
+                    <input type="password" name="password" ngModel placeholder="Enter password" class="form-control"/>
                 </div>
-                <div class="col-md-8">
-                    <input type="password" name="password" ngModel placeholder="Enter password"/>
+                <div class="col-md-12 mt-3">
+                    <button class="btn btn-info" type="submit">Login</button>
+                    <button class="btn btn-secondary float-right" type="button" routerLink="/registration">Registration</button>
                 </div>
             </div>
-            <button class="btn btn-info" type="submit">Login</button>
         </form>
     </div>
     

@@ -27,7 +27,8 @@ export class LoginComponent implements OnInit {
     });
     
     if(filterData) {
-      this.router.navigate(['/home'])
+      this.router.navigate(['/home']);
+      
     } else {
       this.isSuccess = true;
     }
