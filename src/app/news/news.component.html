@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 p-5" *ngFor="let news of newsList">
+            <div class="card">
+                <div class="card-header">{{news.title}}</div>
+                <div class="card-body">{{news.boby | slice:1:100}}</div>
+                <div class="card-footer"><button class="btn btn-info" (click)="showMore(news)">Show More</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal" *ngIf="isDialogOPen">
+
+    <!-- Modal content -->
+    <div class="card modal-content">
+        <div class="card-header">
+            {{selectedNews.title}} <span class="close" (click)="isDialogOPen=false;">&times;</span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <img [src]="selectedNews.picture">
+                </div>
+                <div class="col-md-8">
+                    <p>{{selectedNews.boby}}</p>
+                    <p class="pull-right">{{selectedNews.title}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <p class="pull-right">published on: {{selectedNews.published}}</p>
+        </div>
+    </div>
+  
+  </div>
